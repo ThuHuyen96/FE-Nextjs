@@ -3,7 +3,6 @@ import "./globals.css"
 import Head from "next/head"
 import { AppProvider } from "@/provider/AppProvider"
 import { CookiesProvider } from "next-client-cookies/server"
-import { isLogged } from "@/middleware/checkLogin"
 import React from "react"
 import { AntdRegistry } from "@ant-design/nextjs-registry"
 import { Viewport } from "next"
@@ -42,8 +41,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const { logged, profile } = await isLogged()
-
   return (
     <html lang="en">
       <head>
@@ -54,9 +51,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} ${notoSansJP.variable}`}>
         <CookiesProvider>
-          <AppProvider
-            isLogged={logged}
-            profile={profile}>
+          <AppProvider>
             <AntdRegistry>
               <AutoScrollTop />
               {children}
