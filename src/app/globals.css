@@ -23,7 +23,7 @@ body {
   margin: 0px;
   font-size: 0.875rem; /* 14px */
   line-height: 1.25rem; /* 20px */  
-  font-family: "HiraKakuPro, var(--font-noto_sans_jp), system-ui, sans-serif";
+  font-family: "var(--font-noto_sans_jp), system-ui, sans-serif";
 }
 
 html {
@@ -49,44 +49,6 @@ select {
 input:focus,
 textarea:focus {
   caret-color: var(--color-dark-600); 
-}
-
-.page-container {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin: auto;
-  @media (min-width: 992px) {
-    max-width: 960px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.custom-dropdown .ant-dropdown-menu {
-  padding: 0 !important;
-  background-color: var(--color-gray-400) !important;
-  border-radius: 0 !important;
-}
-
-.custom-dropdown .ant-dropdown-menu a {
-  color: var(--color-light) !important;
-}
-
-.custom-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
-  padding: 1rem 1.25rem !important;
-  border-bottom: 1px solid rgba(0,0,0,0.15) !important;
-  border-radius: 0 !important;
-}
-
-.custom-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:last-child {
-  border-bottom: none !important;
-}
-
-@layer utilities {
-  .clip-hexagon {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  }
 }
 
 .custom-scrollbar {

@@ -1,4 +1,4 @@
-import { Inter, Noto_Sans_JP } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import Head from "next/head"
 import { AppProvider } from "@/provider/AppProvider"
@@ -13,14 +13,6 @@ const inter = Inter({
   style: ["normal"],
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
-})
-
-const notoSansJP = Noto_Sans_JP({
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal"],
-  subsets: ["latin"],
-  variable: "--font-noto-sans-jp",
   display: "swap",
 })
 
@@ -43,13 +35,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="/fronts/w3/stylesheet.css"
-        />
-      </head>
-      <body className={`${inter.variable} ${notoSansJP.variable}`}>
+      <body className={`${inter.variable}`}>
         <CookiesProvider>
           <AppProvider>
             <AntdRegistry>

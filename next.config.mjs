@@ -15,6 +15,7 @@ const nextConfig = {
     unoptimized: true,
     loader: 'default',
     contentDispositionType: 'inline',
+    domains: ['raw.githubusercontent.com'],
   },
 }
 

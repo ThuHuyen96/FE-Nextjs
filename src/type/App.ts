@@ -4,3 +4,15 @@ export type IPagination = {
     total: number
     pageCount: number
 }
+
+export type ITypePokemon = {
+    name: string
+    url: string
+    image?: string
+    id?: number
+}
+
+export type IQueryPokemon = {
+    limit: number
+    offset: number
+}
